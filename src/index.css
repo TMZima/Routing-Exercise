@@ -1,0 +1,56 @@
+:root {
+  --background: black;
+  --text: #fff;
+  --border: white;
+  --btn-border: rgb(15, 214, 15);
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: monospace;
+  background: var(--background);
+}
+* {
+  color: var(--text);
+  margin: 0;
+}
+button {
+  border: 4px solid var(--btn-border);
+  padding: 8px;
+  border-radius: 4px;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* navbar */
+header {
+  border: 2px solid var(--border);
+}
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: center; /* need to verify spacing here */
+  max-width: 1200px;
+  margin: 10px auto;
+}
+header nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 10px 30px;
+  margin: 0 80px;
+}
+
+/* home page */
+.home {
+  padding: 10px;
+  max-width: 1200px;
+}
+.home h1 {
+  margin-bottom: 10px;
+}
+.home p {
+  padding: 10px 0;
+}
+
+/* content page */
