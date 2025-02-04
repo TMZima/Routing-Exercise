@@ -3,6 +3,8 @@
   --text: #fff;
   --border: white;
   --btn-border: rgb(15, 214, 15);
+  --error: #cc0000;
+  --current-page: #2b6abc;
 }
 body {
   margin: 0;
@@ -15,30 +17,41 @@ body {
   margin: 0;
 }
 button {
-  border: 4px solid var(--btn-border);
+  width: 100px;
+  height: 44px;
+  border: 2px solid var(--btn-border);
+  margin-top: 20px;
   padding: 8px;
   border-radius: 4px;
   color: var(--text);
   background: transparent;
   cursor: pointer;
 }
+button:active {
+  background-color: var(--btn-border);
+}
 
 /* navbar */
 header {
+  height: 44px;
+  width: 100%;
   border: 2px solid var(--border);
+  border-radius: 4px;
 }
 header nav {
   display: flex;
-  gap: 16px;
-  justify-content: center; /* need to verify spacing here */
-  max-width: 1200px;
-  margin: 10px auto;
+  justify-content: space-between;
+  margin: 10px;
 }
 header nav a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-size: 1.5em;
-  padding: 10px 30px;
-  margin: 0 80px;
+  margin: 0;
+}
+header nav a.active {
+  color: var(--current-page);
 }
 
 /* home page */
@@ -54,3 +67,30 @@ header nav a {
 }
 
 /* content page */
+.content {
+  padding: 10px;
+  max-width: 1200px;
+}
+.content h1 {
+  margin-bottom: 10px;
+}
+.content p {
+  padding: 10px 0;
+}
+
+/* page not found */
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.notfound h2 {
+  color: var(--error);
+  margin-bottom: 10px;
+}
+.notfound p {
+  padding: 10px 0;
+}
